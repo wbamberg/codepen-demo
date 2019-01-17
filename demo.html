@@ -3,28 +3,39 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="page.css"/>
+    <link rel="stylesheet" href="demo.css"/>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
     <title>example page</title>
   </head>
 
 <body>
 
-  <div 
-    class="codepen" 
-    data-prefill 
-    data-height="400"
-    data-editable="true"
-    data-default-tab="js,result" 
-  >
-  <pre data-lang="html">
-    &lt;button class="add-para"
-        type="button"&gt;
-    Add para
-    &lt;/button&gt;
+<h1>Document.querySelector()</h1>
 
+<p>The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned.</p>
+
+<div 
+  class="codepen-i-ex" 
+  data-prefill 
+  data-height="400"
+  data-editable="true"
+  data-default-tab="js,result" 
+>
+
+  <button class="run-codepen"
+        type="button">
+    Try it in CodePen
+  </button>
+
+  <pre data-lang="html" class="hidden">
+&lt;button class="add-para"
+    type="button"&gt;
+Add para
+&lt;/button&gt;
   </pre>
 
-  <pre data-lang="js">
+  <pre data-lang="js" class="static-sample-code">
 const addParaButton = document.querySelector('.add-para');
 
 addParaButton.addEventListener('click', () => {
@@ -33,9 +44,30 @@ addParaButton.addEventListener('click', () => {
   document.body.appendChild(para);
 });
   </pre>
-  </div>
+</div>
+
+<p>The matching is done using depth-first pre-order traversal of the document's nodes starting with the first element in the document's markup and iterating through sequential nodes by order of the number of child nodes.</p>
+
+<h2>Syntax</h2>
+
+<pre><code>element = document.querySelector(selectors);</pre></code>
+
+<h3>Parameters</h3>
+
+<dl>
+  <dt>selectors</dt>
+  <dd>A DOMString containing one or more selectors to match. This string must be a valid CSS selector string; if it isn't, a SYNTAX_ERR exception is thrown. See Locating DOM elements using selectors for more about selectors and how to manage them.</dd>
+</dl>
+
+<h3>Return value</h3>
+
+<p>An Element object representing the first element in the document that matches the specified set of CSS selectors, or null is returned if there are no matches.</p>
+
+<p>If you need a list of all elements matching the specified selectors, you should use querySelectorAll() instead.</p>
+
   <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-  <script async src="page.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+  <script async src="demo.js"></script>
 
 </body>
 
