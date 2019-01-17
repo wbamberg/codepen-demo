@@ -1,3 +1,11 @@
+@font-face {
+  font-family: zillaslab;
+  src: url("fonts/woff2/ZillaSlab-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+}
+
 .hidden {
   display: none;
 }
@@ -10,19 +18,16 @@
   position: absolute;
   top: 10px;
   right: 10px;
+  border: 3px solid #3d7e9a;
+  background-color: white;
+  height: 2rem;
+  font-size: 1rem;
+  font-family: zillaslab;
 }
 
 p, dl {
   max-width: 50rem;
   font-family: Arial;
-}
-
-@font-face {
-  font-family: zillaslab;
-  src: url("fonts/woff2/ZillaSlab-Regular.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;
 }
 
 h1, h2, h3 {
