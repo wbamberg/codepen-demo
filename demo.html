@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="page.css"/>
+    <title>example page</title>
+  </head>
+
+<body>
+
+  <div 
+    class="codepen" 
+    data-prefill 
+    data-height="400"
+    data-editable="true"
+    data-default-tab="js,result" 
+  >
+  <pre data-lang="html">
+    &lt;button class="add-para"
+        type="button"&gt;
+    Add para
+    &lt;/button&gt;
+
+  </pre>
+
+  <pre data-lang="js">
+const addParaButton = document.querySelector('.add-para');
+
+addParaButton.addEventListener('click', () => {
+  const para = document.createElement('p');
+  para.textContent = 'All work and no play makes Jack a dull boy.';
+  document.body.appendChild(para);
+});
+  </pre>
+  </div>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  <script async src="page.js"></script>
+
+</body>
+
+</html>
